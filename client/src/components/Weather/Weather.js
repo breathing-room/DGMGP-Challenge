@@ -2,7 +2,7 @@ import React from 'react';
 
 const Weather = () => {
     return (
-        <div>Weather for a week</div>
+        <h3>Weather for this week</h3>
     )
 }
 
