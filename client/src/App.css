@@ -1,11 +1,15 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  flex-grow: 1;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +39,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body, html {
+  background-color: #8db9be;
+  font-family: 'Inter', sans-serif
 }
