@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
-const Tagline = () => {
+const Tagline = ({ location }) => {
     return (
-        <h2>The weather in LOCATION for the week</h2>
+        <h2>The week's weather for {location}</h2>
     )
 }
 
+Tagline.propTypes = {
+    location: PropTypes.string
+}
+
 export default Tagline;
+
