@@ -27,4 +27,6 @@ const openWeatherAPICall = (q) => {
     }
 
 
-module.exports = openWeatherAPICall;
+export default openWeatherAPICall;
+
+// https://rapidapi.com/community/api/open-weather-map?endpoint=apiendpoint_f719676c-072b-4a2d-ad2e-78f8375ea9c8
