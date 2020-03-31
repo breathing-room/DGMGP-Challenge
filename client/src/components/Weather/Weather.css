@@ -1,0 +1,17 @@
+.weather-container {
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.forecast-container {
+    list-style-type: none;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.day {
+    padding: 30px;
+}
