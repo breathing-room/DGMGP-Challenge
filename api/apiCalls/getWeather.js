@@ -5,9 +5,9 @@ dotenv.config();
 const { WEATHER_API_KEY, WEATHER_API_HOST } = process.env;
 
 const getWeather = (q) => {
-    axios({
+    return axios({
         "method":"GET",
-        "url":"https://community-open-weather-map.p.rapidapi.com/forecast",
+        "url":"https://community-open-weather-map.p.rapidapi.com/forecast/daily",
         "headers": {
             "content-type":"application/octet-stream",
             "x-rapidapi-host": WEATHER_API_HOST,
@@ -15,14 +15,9 @@ const getWeather = (q) => {
         },
         "params": {
             "q": q,
-            "cnt":"5"
+            "cnt":"5",
+            "units":"imperial"
             }
-        })
-        .then((response)=>{
-          console.log(response)
-        })
-        .catch((error)=>{
-          console.log(error)
         })
     }
 
