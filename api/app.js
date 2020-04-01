@@ -16,6 +16,7 @@ app.get(`/weather`, (req, res) => {
     getWeather(q).then((response) => {
         res.send(response.data.list)
     })
+    .catch(err => console.log(err));
 })
 
 app.get(`/city`, (req, res) => {
@@ -23,6 +24,7 @@ app.get(`/city`, (req, res) => {
     getCity(lat, lng).then((response) => {
         res.send(response.data.results[0].address_components[0].long_name);
     })
+    .catch(err => console.log(err));
 })
 
 app.listen(port, () => {
