@@ -40,51 +40,53 @@ class App extends React.Component {
           )
         })
         .then(() => {
-            getWeather(this.state.city)
-              .then((response) => {
-                this.setState({
-                  currentDay: response.data[0],
-                  forecast: response.data.slice(1),
-                  isLoaded:true
-                },
-                  this.setState({
-                    isLoaded: true
-                  })
-                )
-            })
-            .catch(err => console.log(err));
+          // Make call to our API to request data from Open Weather Map API
+          getWeather(this.state.city)
+            .then((response) => {
+              this.setState({
+                currentDay: response.data[0],
+                forecast: response.data.slice(1),
+                isLoaded:true
+              },
+              this.setState({
+                isLoaded: true
+              })
+            )
+          })
+          .catch(err => console.log(err));
         })
     });
   }
 
+  // Make weather request with new location based on user search query
   getNewLocationData(newLocation) {
     this.setState({
       isLoaded: false
     })
-      getWeather(newLocation)
-      .then(
-          (response) => {
-            console.log(response);
-          this.setState({
-              currentDay: response.data[0],
-              forecast: response.data.slice(1)
-          },
-            this.setState({
-              isLoaded: true
-            })
-          )
-        },
-      )
-      .catch(err => { 
-        console.log(err);
+    getWeather(newLocation)
+    .then(
+      (response) => {
         this.setState({
-          error: true
-        })
-      });
+            currentDay: response.data[0],
+            forecast: response.data.slice(1)
+        },
+          this.setState({
+            isLoaded: !this.state.isLoaded
+          })
+        )
+      },
+    )
+    .catch(err => { 
+      console.log(err);
+      this.setState({
+        error: true
+      })
+    });
   };
 
-
+  // Called from Search component when user submits a search
   handleLocationSearch = (query) => {
+    // Fix capitalization for UI
     const newLocation = query.split(" ").map((word) => word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
     this.setState({
           city: newLocation
@@ -95,17 +97,19 @@ class App extends React.Component {
 
   render() {
     const { error, isLoaded, city, currentDay, forecast } = this.state;
+    // If an error comes back from Open Weather Map API request, display error message
     if (error) {
       return (
         <div className='App'>
           <Header />
           <div className='content'>
-            <h3 className='error-message'>Oops! That search didn't return anything. Try again.</h3>;
-            <Search handleLocationSearch={this.handleLocationSearch}/>;
+            <h3 className='error-message'>Oops! That search didn't return anything. Try again.</h3>
+            <Search handleLocationSearch={this.handleLocationSearch}/>
           </div>
         </div>
         )
     } 
+    // If the data is not finished loading, display spinner
     else if (!isLoaded) {
       return (
         <div className='App'>
@@ -114,21 +118,21 @@ class App extends React.Component {
           <Spinner />
         </div>
       </div>
-        )
+      )
     } 
+    // Main content
     else {
       return (
-            <div className='App'>
-              <Header />
-              <div className='content'>
-                <Search handleLocationSearch={this.handleLocationSearch}/>
-                <Weather city={city} currentDay={currentDay} forecast={forecast}/>
-              </div>
-            </div>
-          );
-      }
+        <div className='App'>
+          <Header />
+          <div className='content'>
+            <Search handleLocationSearch={this.handleLocationSearch}/>
+            <Weather city={city} currentDay={currentDay} forecast={forecast}/>
+          </div>
+        </div>
+      );
     }
   }
-  
+}
 
 export default App;
