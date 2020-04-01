@@ -1,21 +1,19 @@
 .search-bar {
-    padding-top: 15px;
-    /* width: 51.5%; */
-    margin: 0 auto;
-    display: inline-block
+	padding-top: 15px;
+	margin: 0 auto;
+	display: inline-block
 }
 
 .search-input {
-    width: 300px;
-    padding: 8px;
-    margin: 10px 5px;
-    box-sizing: border-box; 
+	width: 300px;
+	padding: 8px;
+	margin: 10px 5px;
+	box-sizing: border-box; 
 }
 
 .search-btn {
-    padding: 10px;
-    margin: 0 auto;
-    border-radius: 20%;
-    background-color: aliceblue;
-    /* width: 5%; */
+	padding: 10px;
+	margin: 0 auto;
+	border-radius: 20%;
+	background-color: aliceblue;
 }

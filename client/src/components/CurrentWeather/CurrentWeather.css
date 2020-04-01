@@ -1,86 +1,83 @@
 .current-container {
-    width: 51.5%;
-    margin: 0 auto;
-    padding: 18px;
-    background-color: rgba(3, 190, 190, 0.438);
-    box-shadow: 2px 2px 6px -2px rgba(0,0,0,0.46);
-    border-radius: 4px;
-    border-bottom: 3px solid rgba(253, 116, 36, 0.521);
-    /* border-bottom: 3px solid rgba(3, 190, 190, 0.651); */
+	width: 51.5%;
+	margin: 0 auto;
+	padding: 18px;
+	background-color: rgba(3, 190, 190, 0.438);
+	box-shadow: 2px 2px 6px -2px rgba(0,0,0,0.46);
+	border-radius: 4px;
+	border-bottom: 3px solid rgba(253, 116, 36, 0.521);
 }
 
 .current-main-content {
-    padding: 20px;
-    margin-top: -10px;
+	padding: 20px;
+	margin-top: -10px;
 }
 
 .current-city {
-    font-weight: 100
+	font-weight: 100
 }
 
 .current-weather-icon {
-    /* margin: 0 auto; */
-    margin-top: -15px;
-    margin-bottom: -25px;
+	margin-top: -15px;
+	margin-bottom: -25px;
 }
 
 .current-temp {
-    font-size: 50px;
-    font-weight: 350;
-    margin: 0 auto;
-    padding-top: 10px;
+	font-size: 50px;
+	font-weight: 350;
+	margin: 0 auto;
+	padding-top: 10px;
 }
 
 .current-description-container p {
-    font-size: 12px;
+	font-size: 12px;
 }
 
 .time-day {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto;
-    justify-content: center;
-    margin-top: -50px;
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	justify-content: center;
+	margin-top: -50px;
 }
 
 .current-day {
-    font-size: 22px;
-    font-weight: 200;
-    margin-top: 30px;
-    padding: 5px;
+	font-size: 22px;
+	font-weight: 200;
+	margin-top: 30px;
+	padding: 5px;
 }
 
 .current-time {
-    font-size: 22px;
-    font-weight: 200;
-    margin-top: 30px;
-    padding: 5px;
+	font-size: 22px;
+	font-weight: 200;
+	margin-top: 30px;
+	padding: 5px;
 }
 
 .current-description {
-    font-weight: 400;
-    font-style: italic;
-    font-size: 15px;
-    margin: 0 auto;
-    /* margin-top: -10px; */
+	font-weight: 400;
+	font-style: italic;
+	font-size: 15px;
+	margin: 0 auto;
 }
 
 .extra-details {
-    display: flex;
-    justify-content: center;
-    margin-left: -40px;
+	display: flex;
+	justify-content: center;
+	margin-left: -40px;
 }
 
 .extra-details ul {
-    list-style-type: none;
-    font-size: 15px;
-    color: #373838;
+	list-style-type: none;
+	font-size: 15px;
+	color: #373838;
 }
 
 .extra-details ul li {
-    padding: 5px;
+	padding: 5px;
 }
 
 .extra-details ul li span {
-    font-size: 12px
+	font-size: 12px
 }

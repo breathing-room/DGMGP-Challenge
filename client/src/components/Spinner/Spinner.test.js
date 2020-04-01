@@ -1,16 +1,21 @@
 import React from 'react';
 import Spinner from './Spinner'
-
 import { shallow } from 'enzyme'
+import { cleanup } from '@testing-library/react';
 
 describe('Spinner component', () => {
+	let wrapper;
 
-  test('it renders correctly', () => {
-      const wrapper = shallow(
-        <Spinner />
-      );
-    
-      expect(wrapper).toMatchSnapshot();
-  });
+	beforeEach(() => {
+		wrapper = shallow(
+			<Spinner />
+		)
+	});
+
+	afterEach(cleanup);
+
+	test('it renders correctly', () => {
+		expect(wrapper).toMatchSnapshot();
+	});
 })
 
