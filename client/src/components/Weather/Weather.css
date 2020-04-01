@@ -1,12 +1,14 @@
 .weather-container {
-    padding: 50px;
+    padding: 20px;
     margin: 0 auto;
 }
 
 .forecast-container {
+    width: 66%;
     list-style-type: none;
     display: flex;
     margin: 0 auto;
+    margin-top: -20px;
     padding: 10px;
     flex-direction: row;
     justify-content: center;

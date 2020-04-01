@@ -1,26 +1,42 @@
 import React, { useState } from 'react';
+import './Search.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import PropTypes from 'prop-types'
 
-const Search = ({ locationSearch }) => {
+const Search = ({ handleLocationSearch }) => {
     const [ query, setQuery ] = useState('');
 
     const handleChange = (e) => {
         setQuery(e.target.value);
     }
 
+    const handleKeyPress = event => {
+        if (event.key === 'Enter') {
+            handleLocationSearch(query);
+        }
+      };
+
     return (
-        <div> 
-            <div>Search for the weather some place else</div>
-            <input type='text' value={query} className='search-input' onChange={handleChange}></input>
-            <button className='search-btn' onClick={() => locationSearch(query)}>Search</button>
+        <div className='search-bar'> 
+            <input 
+                type='text' 
+                value={query} 
+                placeholder='Search for a city' 
+                className='search-input' 
+                size='100' 
+                onChange={handleChange} 
+                onKeyPress={handleKeyPress}/>
+            <button className='search-btn' onClick={() => { handleLocationSearch(query); setQuery('')}}>
+                <FontAwesomeIcon icon={faSearch} style={{color:'#373838'}} />
+            </button>
         </div>
     )
 }
 
 Search.propTypes = {
     query: PropTypes.string,
-    handleChange: PropTypes.func,
-    handleSubmit: PropTypes.func,
+    handleLocationSearch: PropTypes.func
 }
 
 export default Search;

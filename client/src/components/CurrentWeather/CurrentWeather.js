@@ -1,36 +1,48 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import moment from 'moment';
 import './CurrentWeather.css'
 
 const CurrentWeather = ({ currentDay, city }) => {
-    console.log(currentDay)
+      const time = moment().format('h:hh A');
+      const day = moment().format('dddd');
       // Retrieve weather icon from Open Weather Map API
       const iconUrl = `https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@2x.png`
       return (
           <div className='current-container'> 
               <div className='current-main-content'>
-                <h2>{city}</h2>
+                <h1 className='current-city'>{city}</h1>
                   <div className='current-weather-icon'>
                       <img src={iconUrl} alt='Weather Icon'/>
                   </div>
-                  <h2>
+                  <h2 className='current-temp'>
                         {currentDay.temp.day}° F
                   </h2>
               </div>
               <div className='current-description-container'> 
-                    <h3 className='description'>{currentDay.weather[0].description}</h3>
+                <span className='time-day'>
+                    <h3 className='current-day'>{day}</h3>
+                    <h3 className='current-time'>{time}</h3>
+                </span>
+                    <h3 className='current-description'>{currentDay.weather[0].description}</h3>
                     <div className='extra-details'>
                         <ul>
-                            <li>Feels like <b>{currentDay.feels_like.day}</b></li>
-                            <li>Humidity <b>{currentDay.humidity}</b></li>
+                            <li><b>{currentDay.feels_like.day}</b> <span>feel</span></li>
+                            <li><b>{currentDay.humidity}</b> <span>humidity</span> </li>
                         </ul>
                         <ul>
-                            <li>Rain <b>{currentDay.rain}mm</b></li>
-                            <li>Pressure <b>{currentDay.pressure}</b></li>
+                            <li><b>{currentDay.clouds}%</b> <span>cloudy</span> </li>
+                            <li><b>{currentDay.speed}</b> <span>wind</span> </li>
                         </ul>
                     </div>
               </div>
           </div>
       )
+}
+
+CurrentWeather.propTypes = {
+    currentDay: PropTypes.object,
+    city: PropTypes.string
 }
 
 export default CurrentWeather
