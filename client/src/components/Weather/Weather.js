@@ -22,7 +22,7 @@ const Weather = ({ city, currentDay, forecast }) => {
         return <Spinner />;
     } else {
         return (
-            <div className='weather-container'>
+            <div className='weather-container' data-testid='weather-component'> 
                 {city ? 
                 <div>
                     <CurrentWeather currentDay={currentDay} city={city}/>

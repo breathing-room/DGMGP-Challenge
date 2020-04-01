@@ -9,7 +9,11 @@ describe('Header component', () => {
         wrapper = shallow(<Header />)
     })
 
-    test('renders h2 element', () => {
-        expect(wrapper.find('h2').text()).toBe(`Don't Get Mad, Get the Weather`)
+    test('it renders correctly', () => {   
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    test(' itrenders h5 element', () => {
+        expect(wrapper.find('h5').text()).toBe(`Don't get mad, get the weather.`)
     })
 })

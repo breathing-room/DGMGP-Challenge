@@ -4,12 +4,13 @@ import moment from 'moment';
 import './CurrentWeather.css'
 
 const CurrentWeather = ({ currentDay, city }) => {
+      // Format current day and time
       const time = moment().format('h:hh A');
       const day = moment().format('dddd');
       // Retrieve weather icon from Open Weather Map API
       const iconUrl = `https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@2x.png`
       return (
-          <div className='current-container'> 
+          <div className='current-container' data-testid='current-weather'> 
               <div className='current-main-content'>
                 <h1 className='current-city'>{city}</h1>
                   <div className='current-weather-icon'>

@@ -10,5 +10,3 @@ class Spinner extends React.Component {
 }
 
 export default Spinner;
-
-// https://www.npmjs.com/package/react-loader-spinner

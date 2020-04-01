@@ -27,7 +27,7 @@ const Search = ({ handleLocationSearch }) => {
                 size='100' 
                 onChange={handleChange} 
                 onKeyPress={handleKeyPress}/>
-            <button className='search-btn' onClick={() => { handleLocationSearch(query); setQuery('')}}>
+            <button data-testid='search-btn' className='search-btn' onClick={() => { handleLocationSearch(query); setQuery('')}}>
                 <FontAwesomeIcon icon={faSearch} style={{color:'#373838'}} />
             </button>
         </div>
