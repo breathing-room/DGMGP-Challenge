@@ -28,7 +28,7 @@ You will need to get an API key from Open Weather Map API and Google in order to
 
 &nbsp;   
 ## Walkthrough/features
-I was asked to build a 'simple Node/React app that displays dynamic information from a third party API. For example. Pull weather data for the current week. The call to the third party should be done on the server side. The client should only be making requests to the local server.'
+I was asked to build a simple Node/React app that displays dynamic information from a third party API. The call to the third party should be done on the server side. The client should only be making requests to the local server.
 
 &nbsp;   
 ### Server/API
