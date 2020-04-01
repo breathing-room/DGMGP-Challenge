@@ -4,7 +4,7 @@ import Header from './components/Header/Header'
 import Weather from './components/Weather/Weather';
 import Search from './components/Search/Search';
 import Spinner from './components/Spinner/Spinner';
-import getCityByCoords from './utils/geolocate';
+import getCityByCoords from './utils/getCity';
 import getWeather from './utils/getWeather';
 
 class App extends React.Component {
