@@ -1,7 +1,7 @@
 # DGMGP Coding Challenge
 This is a basic weather forecast app built as a coding challenge for an interview with **Don't Get Mad Get Paid**.
 
-![](client/public/assets/Screenshot.png)
+![](client/public/assets/Screenshot1.png)
 
 It's built on [React](https://reactjs.org/) and [Node.js/Express](https://expressjs.com/), and makes use of the following third-party APIs and libraries:
 - [Open Weather Map API](https://openweathermap.org/api)
