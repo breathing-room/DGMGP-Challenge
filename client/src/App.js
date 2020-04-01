@@ -100,10 +100,10 @@ class App extends React.Component {
         <div className='App'>
           <Header />
           <div className='content'>
-            <div style={{padding: '20px'}}>Error: {error.message}</div>;
+            <h3 className='error-message'>Oops! That search didn't return anything. Try again.</h3>;
+            <Search handleLocationSearch={this.handleLocationSearch}/>;
           </div>
         </div>
-        
         )
     } 
     else if (!isLoaded) {
