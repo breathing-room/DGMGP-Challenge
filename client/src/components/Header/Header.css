@@ -1,7 +1,8 @@
 .header {
-    background-color: #175c6d;
-    color: rgba(222, 253, 253);
+    /* background-color: #175c6d; */
+    /* color: rgba(222, 253, 253); */
+    padding: 8px;
     margin: 0 auto;
-    padding: 15px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    margin-top: 10px;
+    font-weight: 400;
 }
