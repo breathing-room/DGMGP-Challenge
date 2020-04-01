@@ -1,11 +1,12 @@
 # DGMGP Coding Challenge
-This is a small weather app built as a coding challenge for an interview for Don't Get Mad Get Paid.
+This is a basic weather forecast app built as a coding challenge for an interview with **Don't Get Mad Get Paid**.
 
 ![](client/public/assets/Screenshot.png)
 
-Built on [React](https://reactjs.org/) and [Node.js/Express](https://expressjs.com/), including the following third-party APIs and libraries:
+It's built on [React](https://reactjs.org/) and [Node.js/Express](https://expressjs.com/), and makes use of the following third-party APIs and libraries:
 - [Open Weather Map API](https://openweathermap.org/api)
 - [Google (Reverse) Geocoding API](https://developers.google.com/maps/documentation/geocoding/start#reverse)
+- [HTML5 Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
 - [Axios](https://github.com/axios/axios)
 - [Moment](https://momentjs.com/)
 - [Jest](https://jestjs.io/)
